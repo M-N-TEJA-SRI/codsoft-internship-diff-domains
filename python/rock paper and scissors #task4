@@ -1,0 +1,138 @@
+import random
+print("welcome to rock, paper and scissor game")
+playeronename=input("enter player one name ")
+playertwoname=input("enter player two name ")
+playerone=0
+playertwo=0
+options=['r','s','p']
+choice=1
+chances=0
+print("r-rock")
+print("s-scissor")
+print("p-papper")
+while(choice==1 and chances<5):
+    attemptone=options[random.choice([0,1,2])]
+    print(playeronename+" got "+attemptone)
+    attemptwo=options[random.choice([0,1,2])]
+    print(playertwoname+" got "+attemptwo)
+    chances+=1
+    if(attemptone==attemptwo):
+        print("draw")
+    elif(attemptone=='r' and attemptwo=='s'):
+        playerone+=1
+    elif(attemptone=='s' and attemptwo=='r'):
+        playertwo+=1
+    elif(attemptone=='s' and attemptwo=='p'):
+        playerone+=1
+    elif(attemptone=='p' and attemptwo=='s'):
+        playertwo+=1
+    elif(attemptone=='p' and attemptwo=='r'):
+        playerone+=1
+    elif(attemptone=='r' and attemptwo=='p'):
+        playertwo+=1
+    print("-------------------------------------")
+    print("scores")
+    print(playeronename+str(playerone))
+    print(playertwoname+str(playertwo))
+    print("-------------------------------------")
+    if(chances==5):
+        if(playerone==playertwo):
+            print("tie")
+        elif(playerone>playertwo):
+            print("congratulations "+playeronename+str(playerone)+" won ")
+        elif(playertwo>playerone):
+            print("congratulations "+playertwoname+str(playertwo)+" won ")
+        print("want to continue then press 1")
+        choice=int(input())
+        if(choice!=1):
+            print("exit")
+            break
+        elif(choice==1):
+            playerone=0
+            playertwo=0
+            chances=0
+    output
+welcome to rock, paper and scissor game
+enter player one name mom
+enter player two name teja
+r-rock
+s-scissor
+p-papper
+mom got p
+teja got r
+-------------------------------------
+scores
+mom1
+teja0
+-------------------------------------
+mom got s
+teja got r
+-------------------------------------
+scores
+mom1
+teja1
+-------------------------------------
+mom got r
+teja got r
+draw
+-------------------------------------
+scores
+mom1
+teja1
+-------------------------------------
+mom got s
+teja got r
+-------------------------------------
+scores
+mom1
+teja2
+-------------------------------------
+mom got p
+teja got s
+-------------------------------------
+scores
+mom1
+teja3
+-------------------------------------
+congratulations teja3 won 
+want to continue then press 1
+1
+
+
+mom got p
+teja got r
+-------------------------------------
+scores
+mom1
+teja0
+-------------------------------------
+mom got p
+teja got r
+-------------------------------------
+scores
+mom2
+teja0
+-------------------------------------
+mom got s
+teja got p
+-------------------------------------
+scores
+mom3
+teja0
+-------------------------------------
+mom got s
+teja got r
+-------------------------------------
+scores
+mom3
+teja1
+-------------------------------------
+mom got r
+teja got s
+-------------------------------------
+scores
+mom4
+teja1
+-------------------------------------
+congratulations mom4 won 
+want to continue then press 1
