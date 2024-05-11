@@ -1,0 +1,88 @@
+import java.util.Scanner;
+import java.util.Random;
+class A{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+        Random rand=new Random();
+        System.out.println("Welcome to guess game");
+        int choice=1,guessnum=-1,countlimit=0;
+        int secretnum=rand.nextInt(1000);
+        while(choice==1&&countlimit<5&&guessnum!=secretnum){
+            countlimit++;
+            System.out.println("enter the guess number");
+            guessnum=sc.nextInt();
+            if(guessnum==secretnum){
+                System.out.println("congratulations you won");
+                if(5-countlimit>1)
+                System.out.println("you are left with "+(5-countlimit)+" chances ");
+            }
+            else if(guessnum!=secretnum){
+                if(guessnum>secretnum){
+                    if(guessnum-secretnum<=5)
+                    System.out.println("A bit high but close to secret number");
+                    else
+                    System.out.println("too high");
+                }
+                else if(countlimit==5)
+                {
+                    System.out.println("sorry you lost the game");
+                    System.out.println("The secret number is "+secretnum);
+                }
+                else {
+                    if(secretnum-guessnum<=5)
+                    System.out.println("A bit low but close to the secret number");
+                    else
+                    System.out.println("too low");
+                }
+            }
+            if(secretnum==guessnum||countlimit==5){
+                System.out.println("want to play again then click on 1");
+                choice=sc.nextInt();
+                if(choice==1){
+                    countlimit=0;
+                    secretnum=rand.nextInt(1000);
+                }
+                else if(choice!=1)
+                {
+                    System.out.println("exit");
+                    break;
+                }
+            }
+        }
+    }
+}
+output
+Welcome to guess game
+enter the guess number
+6
+too low
+enter the guess number
+987
+too high
+enter the guess number
+657
+too high
+enter the guess number
+432
+too high
+enter the guess number
+221
+The secret number is 282
+want to play again then click on 1
+1
+enter the guess number
+987
+too high
+enter the guess number
+666
+too low
+enter the guess number
+789
+too low
+enter the guess number
+890
+too low
+enter the guess number
+900
+The secret number is 930
+want to play again then click on 1
