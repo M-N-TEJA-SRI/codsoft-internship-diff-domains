@@ -1,0 +1,60 @@
+contacts={}
+def addcontact():
+    name=input("enter person name : ")
+    phno=input("enter phone number : ")
+    email=input("enter mail id : ")
+    address=input("enter address : ")
+    contacts[name]={"phno":phno,"email":email,"address":address}
+def viewcontacts():
+    print("The contacts in the list are:")
+    for name,details in contacts.items():
+        print(name,":",details["phno"])
+def searchcontact():
+    search=input("enter the name or phno to search")
+    for name,details in contacts.items():
+        if search in name or search in details["phno"]:
+            print("found the contact")
+            print(name,":",details)
+def updatecontact():
+    user=input("enter name  to be updated")
+    if user in contacts:
+        phno=input("enter new phone number : ")
+        email=input("enter new mail id : ")
+        address=input("enter new address : ")
+        contacts[user]={"phno":phno,"email":email,"address":address}
+        print(contacts[user])
+    else:
+        print("given name is not in the contact list")
+def deletecontact():
+    user=input("enter name to be deleted")
+    if user in contacts:
+        del contacts[user]
+        print("deleted")
+        print("here are the new contacts")
+        viewcontacts()
+    else:
+        print("given name is not found")
+        
+print("contact book")
+choice=1
+while(choice!=6):
+    print("1-addcontact")
+    print("2-viewcontacts")
+    print("3-search contact")
+    print("4-update contact")
+    print("5-delete")
+    print("6-exit")
+    choice=int(input("enter your choice"))
+    if(choice==6):
+        print("exit")
+        break
+    elif(choice==1):
+        addcontact()
+    elif(choice==2):
+        viewcontacts()
+    elif(choice==3):
+        searchcontact()
+    elif(choice==4):
+        updatecontact()
+    elif(choice==5):
+        deletecontact()
