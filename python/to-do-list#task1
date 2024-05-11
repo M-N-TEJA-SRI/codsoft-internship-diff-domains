@@ -1,0 +1,82 @@
+print("to do list")
+print("enter no of tasks")
+n=int(input())
+li=[]
+flag=0
+print("enter the tasks")
+for i in range(n):
+    s=input()
+    li.append(s)
+choice=0    
+while(choice!=5):    
+    print("1-add tasks to the list")
+    print("2-display the list")
+    print("3-mark the task completed")
+    print("4-delete the task")
+    print("5-exit")
+    choice=int(input())
+    if(choice==1):
+        print("enter no of tasks you want to add")
+        x=int(input())
+        for i in range(n,n+x):
+            s=input()
+            li.append(s)
+    elif(choice==2):
+        for i in range(len(li)):
+            print(li[i])
+    elif(choice==3):
+        print("enter the task name which you want to mark as completed")
+        s=input()
+        for i in range(len(li)):
+            if(li[i]==s):
+                li[i]+=" completed"
+                flag=1
+                index=i
+                break
+        if(flag==0):
+            print("No such task is in the list that could be marked completed")
+        elif(flag==1):    
+            print("The task which is marked completed is"+li[index])
+    elif(choice==4):
+        print("enter the task name which you want to delete")
+        s=input()
+        for i in range(len(li)):
+            if(li[i]==s):
+                flag=1
+                li.remove(s)
+                break
+        if(flag==0):
+            print("No such task is in the list that could be deleted")
+        elif(flag==1):
+            print("The task "+s+" is deleted")
+            
+    elif(choice==5):
+        print("exit")
+    print("want to exit then click on 5")
+    choice=int(input())
+  output      
+     to do list
+enter no of tasks
+2
+enter the tasks
+teaching
+skipping
+1-add tasks to the list
+2-display the list
+3-mark the task completed
+4-delete the task
+5-exit
+1
+enter no of tasks you want to add
+2
+walking
+making
+want to exit then click on 5
+3
+1-add tasks to the list
+2-display the list
+3-mark the task completed
+4-delete the task
+5-exit
+
+=== Session Ended. Please Run the code again ===   
