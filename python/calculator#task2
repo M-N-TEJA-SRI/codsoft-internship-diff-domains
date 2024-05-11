@@ -1,0 +1,63 @@
+def add(a,b):
+    return a+b
+def sub(a,b):
+    return a-b
+def mul(a,b):
+    return a*b
+def div(a,b):
+    return a/b
+def rem(a,b):
+    return a%b
+print("calculator")
+choice=0
+while(choice!=6):
+    print("1-addition")
+    print("2-subtraction")
+    print("3-multiplication")
+    print("4-division")
+    print("5-remainder")
+    print("6-exit")
+    choice=int(input("enter your choice"))
+    if(choice!=6):
+        a=float(input("enter value 1 : "))
+        b=float(input("enter value 2 : "))
+        if(choice==1):
+            ans=add(a,b)
+            print(ans)
+        elif(choice==2):
+            ans=sub(a,b)
+            print(ans)
+        elif(choice==3):
+            ans=mul(a,b)
+            print(ans)
+        elif(choice==4):
+            ans=div(a,b)
+            print(ans)
+        elif(choice==5):
+            if(int(a)==a and int(b)==b):
+                ans=rem(a,b)
+                print(ans)
+            else:
+                print("impossible to calculate remainder for float")
+    elif(choice==6):
+        print("exit")
+        break
+    output
+calculator
+1-addition
+2-subtraction
+3-multiplication
+4-division
+5-remainder
+6-exit
+enter your choice5
+enter value 1 : 7
+enter value 2 : 8
+7.0
+1-addition
+2-subtraction
+3-multiplication
+4-division
+5-remainder
+6-exit
+enter your choice
