@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main() {
+    // Write C++ code here
+  float a,b;
+  int n;
+  do{
+  cout<<"1-addition\n2-subtraction\n3-multiplication\n4-division\n5-remainder\n6-exit\n";
+  cout<<"enter two values\n";
+  cin>>a>>b;
+  cout<<"enter choice\n";
+  cin>>n;
+  switch(n){
+      case 1:
+      cout<<a+b<<endl;
+      break;
+      case 2:
+      cout<<a-b<<endl;
+      break;
+      case 3:
+      cout<<a*b<<endl;
+      break;
+      case 4:
+      cout<<a/b<<endl;
+      break;
+      case 5:
+      if(int(a)==a&&int(b)==b)
+      cout<<int(a)%int(b)<<endl;
+      else
+      cout<<"remainder not possible for decimal numbers\n";
+      break;
+      case 6:
+      cout<<"exit\n";
+      break;
+      default:
+      cout<<"wrong choice\n";
+      break;
+  }
+  }
+  while(n!=6);
+
+    return 0;
+}
