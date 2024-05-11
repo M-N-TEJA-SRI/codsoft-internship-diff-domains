@@ -1,0 +1,80 @@
+#include<bits/stdc++.h>
+#include<ctime>
+using namespace std;
+int main(){
+int guess_num=0,guess_limit=0,secret_num,choice;
+srand(time(0));
+string playername;
+cout<<"welcome to guess name\n";
+cout<<"enter player name\n";
+cin>>playername;
+secret_num=rand()%(100);//lowerbound=1 upperbound=100 
+while(guess_limit<5){
+    cout<<"enter the guess number\n";
+    cin>>guess_num;
+guess_limit++;
+if(guess_num!=secret_num){
+if(guess_num>secret_num)
+{
+    if(guess_num-secret_num<=5)
+    cout<<"close to the secret number but a bit high\n";
+    else
+    cout<<"too high\n";
+}
+
+else if(guess_num<secret_num)
+{
+    if(secret_num-guess_num<=5)
+    cout<<"close to the secret number but a bit low\n";
+    else
+   cout<<"too low\n"; 
+}
+
+}
+else if(guess_num==secret_num){
+cout<<"wow you won congratulations "<<playername<<endl;
+if(5-guess_limit>1)
+cout<<"you are still left with "<<5-guess_limit<<" chances\n";
+}
+ if(guess_limit==5||secret_num==guess_num){
+     if(guess_limit==5&&secret_num!=guess_num){
+         cout<<"the secret number is "<<secret_num<<endl;
+     }
+cout<<"want to play again then click on 1\n";
+cin>>choice;
+if(choice!=1){
+cout<<"exit\n";
+break;
+}
+else if(choice==1)
+{
+guess_limit=0;
+cout<<"welcome back to guess name\n";
+secret_num=rand()%100;
+}
+}
+}
+
+return 0;
+}
+output
+welcome to guess name
+enter player name
+teja
+enter the guess number
+7
+too low
+enter the guess number
+98
+too high
+enter the guess number
+65
+too low
+enter the guess number
+89
+close to the secret number but a bit high
+enter the guess number
+100
+too high
+the secret number is 85
+want to play again then click on 1
