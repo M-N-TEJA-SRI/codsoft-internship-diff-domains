@@ -1,0 +1,68 @@
+import java.util.Scanner;
+class A{
+    public static void main(String args[]){
+        Scanner sc=new Scanner(System.in);
+      int choice;
+        
+        do{
+            
+        System.out.println("student grade calculator");
+        System.out.println("enter name");
+        String s=sc.next();
+        System.out.println("enter number of subjects");
+        int n=sc.nextInt();
+        float[] a=new float[n];
+        float sum=0;
+        int i;
+        System.out.println("enter the marks of the subjects");
+        for(i=0;i<n;i++){
+            a[i]=sc.nextFloat();
+            sum+=a[i];
+        }
+        float avg=sum/n;
+        
+        System.out.println("name: "+s);
+        System.out.println("The marks of the subjects are");
+        for(i=0;i<n;i++){
+            System.out.println(a[i]);
+        }
+        System.out.println("The total marks="+sum);
+       
+        System.out.println("The average percentage="+avg);
+        System.out.print("The grade of "+s+" is ");
+        if(avg>=90&&avg<=100)
+        System.out.print("O");
+        else if(avg>=80&&avg<90)
+        System.out.print("A");
+        else if(avg>=70&&avg<80)
+        System.out.print("B");
+        else if(avg>=60&&avg<70)
+        System.out.print("C");
+        else if(avg>=50&&avg<60)
+        System.out.print("D");
+        else if(avg<50)
+        System.out.print("Fail");
+        System.out.println("want to exit then click on 2");
+        choice=sc.nextInt();
+        }
+        while(choice!=2);
+    }
+
+    }
+    output
+    student grade calculator
+enter name
+teja
+enter number of subjects
+1
+enter the marks of the subjects
+100
+name: teja
+The marks of the subjects are
+100.0
+The total marks=100.0
+The average percentage=100.0
+The grade of teja is Owant to exit then click on 2
+1
+student grade calculator
+enter name
