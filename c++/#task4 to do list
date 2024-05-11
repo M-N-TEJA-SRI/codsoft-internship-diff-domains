@@ -1,0 +1,169 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    // Write C++ code here
+  int n,choice,x,index;
+  string s;
+  cout<<"enter number of tasks you want to include\n";
+  cin>>n;
+  vector<string>v;
+  int i,flag=0;
+  cout<<"enter the tasks\n";
+  for(i=0;i<n;i++){
+      cin>>s;
+     v.push_back(s);
+  }
+  do{
+cout<<"1-add to list\n";
+cout<<"2-display list\n";
+cout<<"3-mark task as completed\n";
+cout<<"4-delete task\n";
+cout<<"5-exit\n";
+cout<<"enter your choice\n";
+cin>>choice;
+switch(choice){
+    case 1:
+    cout<<"enter number of tasks you want to add\n";
+    cin>>x;
+    cout<<"enter the tasks\n";
+    for(i=n;i<n+x;i++){
+        cin>>s;
+        v.push_back(s);
+    }
+    break;
+    case 2:
+    cout<<"The tasks in the list are:\n";
+    for(i=0;i<v.size();i++){
+        cout<<v[i]<<endl;
+    }
+    break;
+    case 3:
+    cout<<"enter the task name which you want to mark it completed\n";
+    cin>>s;
+    for(i=0;i<v.size();i++){
+        if(v[i]==s){
+            v[i]+=" completed";
+            flag=1;
+            index=i;
+            break;
+        }
+        
+    }
+    if(flag==0){
+        cout<<"given task does not exist in the list\n";
+    }
+    else if(flag==1)
+    cout<<"The task is marked as completed"<<endl;
+    cout<<v[index]<<endl;
+    
+    break;
+    case 4:
+    cout<<"enter the task name which you want to delete\n";
+    cin>>s;
+    for(i=0;i<v.size();i++){
+        if(v[i]==s){
+        v.erase(v.begin()+i);
+        flag=1;
+        break;
+        }
+    }
+    if(flag==0)
+    cout<<"There is no such task to delete\n";
+    else if(flag==1)
+    cout<<s<<" deleted\n";
+    break;
+    case 5:
+    cout<<"exit\n";
+    break;
+}
+
+}
+while(choice!=5);
+    return 0;
+}
+output
+enter number of tasks you want to include
+3
+enter the tasks
+playing
+singing
+cooking
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+1
+enter number of tasks you want to add
+1
+enter the tasks
+drawing
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+2
+The tasks in the list are:
+playing
+singing
+cooking
+drawing
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+3
+enter the task name which you want to mark it completed
+drawing
+The task is marked as completed
+drawing completed
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+2
+The tasks in the list are:
+playing
+singing
+cooking
+drawing completed
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+4
+enter the task name which you want to delete
+cooking
+cooking deleted
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+2
+The tasks in the list are:
+playing
+singing
+drawing completed
+1-add to list
+2-display list
+3-mark task as completed
+4-delete task
+5-exit
+enter your choice
+5
+exit
+
+
+=== Code Execution Successful ===
