@@ -1,0 +1,19 @@
+import numpy as np
+import pandas as pd
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+iris=datasets.load_iris()
+x=iris.data
+y=iris.target
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2)
+model_LR=LogisticRegression()
+model_LR.fit(x_train,y_train)
+prediction=model_LR.predict(x_test)
+print(accuracy_score(prediction,y_test)*100)
+
+  Iris is a flower . Iris classification is like a hello world programming for ML . Basically Iris has three types setosa,versicolor,verginica . versicolor and verginica has most of the properties in common. 
+  Iris has two main parts: petal and sepal . both petal and sepal has length and width petal and sepal length and width are independent and class of the flower is dependent on these four attributes the accuracy keeps
+  changing every time you run .
+    
