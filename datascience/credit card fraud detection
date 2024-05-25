@@ -1,0 +1,23 @@
+import numpy as np
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score
+data=pd.read_csv('/content/sample_data/creditcard.csv')
+normal=data[data.Class==0]
+print(normal.shape)
+fraud=data[data.Class==1]
+print(fraud.shape)
+data.groupby('Class').mean()
+normal_new=normal.sample(n=30)
+new_dataset=pd.concat([fraud,normal_new],axis=0)
+new_dataset['Class'].value_counts()
+x=new_dataset.drop(columns='Class',axis=1)
+y=new_dataset['Class']
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.1,random_state=42)
+model_LR=LogisticRegression()
+model_LR.fit(x_train,y_train)
+pred=model_LR.predict(x_test)
+print(accuracy_score(pred,y_test)*100)
+        output
+        100.0
