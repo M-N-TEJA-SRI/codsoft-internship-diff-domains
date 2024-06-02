@@ -1,0 +1,104 @@
+print("Currency Converter")
+choice=1
+while(choice!=13):
+    print("1-rupees to dollars")
+    print("2-dollars to rupees")
+    print("3-euros to rupees")
+    print("4-rupees to euros")
+    print("5-euros to dollars")
+    print("6-dollars to euros")
+    print("7-rupees to pounds")
+    print("8-pounds to rupees")
+    print("9-rupees to new zealand dollars")
+    print("10-new zealand dollars to rupees")
+    print("11-rupees to australian dollars")
+    print("12-australian dollars to rupees")
+    print("13-exit")
+    print("enter your choice")
+    choice=int(input())
+    if(choice==13):
+        print("exit")
+        break
+    elif(choice==1):
+        print("1 rupee = 0.012 dollar")
+        print("enter amount in rupees")
+        money=float(input())
+        print("money in dollars is"+str(money*0.012))
+    elif(choice==2):
+        print("1 dollar = 83.46 rupees")
+        print("enter amount in dollars")
+        money=float(input())
+        print("money in rupees "+str(money*83.46))
+    elif(choice==3):
+        print("1 euro = 90.61 rupees")
+        print("enter amount in euros")
+        money=float(input())
+        print("money in rupees "+str(money*90.61))
+    elif(choice==4):
+        print("1 rupee = 0.011 euro")
+        print("enter amount in rupees")
+        money=float(input())
+        print("money in euros is "+str(money*0.011))
+    elif(choice==5):
+        print("1 euro = 1.09 dollars")
+        print("enter amount in euros")
+        money=float(input())
+        print("money in dollars "+str(money*1.09))
+    elif(choice==6):
+        print("1 dollar = 0.92 euro")
+        print("enter amount in dollars")
+        money=float(input())
+        print("money in euros is "+str(money*0.92)) 
+    elif(choice==7):
+        print("1 rupee = 0.094 pounds")
+        print("enter amount in rupees")
+        money=float(input())
+        print("money in pounds "+str(money*0.094))
+    elif(choice==8):
+        print("1 pound = 106.30 rupees")
+        print("enter amount in pounds")
+        money=float(input())
+        print("money in rupees is "+str(money*106.30))  
+    elif(choice==9):
+        print("1 rupee = 0.019 new zealand dollars")
+        print("enter amount in rupees")
+        money=float(input())
+        print("money in new zealand dollars is "+str(money*0.019))
+    elif(choice==10):
+        print("1 new zealand dollar = 51.38 rupees")
+        print("enter amount in new zealand dollars")
+        money=float(input())
+        print("money in rupees is "+str(money*51.38))      
+    elif(choice==11):
+        print("1 rupee = 0.018 australia dollars")
+        print("enter amount in rupees")
+        money=float(input())
+        print("money in australia dollars is "+str(money*0.018))
+    elif(choice==12):
+        print("1 australia dollar = 55.60 rupees")
+        print("enter amount in australia dollars")
+        money=float(input())
+        print("money in rupees is"+str(money*55.60))
+    else:
+        print("Invalid choice")
+  output
+Currency Converter
+1-rupees to dollars
+2-dollars to rupees
+3-euros to rupees
+4-rupees to euros
+5-euros to dollars
+6-dollars to euros
+7-rupees to pounds
+8-pounds to rupees
+9-rupees to new zealand dollars
+10-new zealand dollars to rupees
+11-rupees to australian dollars
+12-australian dollars to rupees
+13-exit
+enter your choice
+6
+1 dollar = 0.92 euro
+enter amount in dollars
+500
+money in euros is 460.0
