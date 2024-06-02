@@ -1,0 +1,51 @@
+print("Temperature converter")
+choice=1
+while(choice!=3):
+    print("1-celsius to fahrenheit")
+    print("2-fahrenheit to celsius")
+    print("3-exit")
+    print("enter choice")
+    choice=int(input())
+    print("enter temperature")
+    temp=float(input())
+    if(choice==3):
+        print("exit")
+        break
+    elif(choice==1):
+        print("celsius to fahrenheit")
+        fah=((9*temp)+160)/5
+        print("temperature in fahrenheit is ")
+        print(fah)
+    elif(choice==2):
+        print("fahrenheit to celsius")
+        cel=((5*temp)-160)/9
+        print("temperature in celsius is ")
+        print(cel)
+    else:
+        print("wrong choice")
+output
+Temperature converter
+1-celsius to fahrenheit
+2-fahrenheit to celsius
+3-exit
+enter choice
+1
+enter temperature
+0
+celsius to fahrenheit
+temperature in fahrenheit is 
+32.0
+1-celsius to fahrenheit
+2-fahrenheit to celsius
+3-exit
+enter choice
+2
+enter temperature
+0
+fahrenheit to celsius
+temperature in celsius is 
+-17.77777777777778
+1-celsius to fahrenheit
+2-fahrenheit to celsius
+3-exit
+enter choice
